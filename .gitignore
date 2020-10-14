@@ -3,4 +3,4 @@ dist
 node_modules
 .vscode
 *.log
-yarn.lock
+*.lock
