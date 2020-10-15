@@ -53,9 +53,9 @@ module.exports = {
       enforceSizeThreshold: 5000,
       cacheGroups: {
         chunk: {
-          name: false,
+          name: "chunk",
           test: /[\\/]node_modules[\\/]/,
-          enforce: true
+          enforce: false
         },
         // default: {
         //   minChunks: 2,
@@ -91,7 +91,7 @@ module.exports = {
     }),
   ],
   output: {
-    filename: 'chunk-[contenthash].js',
+    filename: '[name]-[contenthash].js',
     //filename: 'main.js',
     //path: path.resolve(__dirname, 'dist'),
     path: path.resolve(process.cwd(), 'dist'),

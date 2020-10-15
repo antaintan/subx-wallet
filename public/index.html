@@ -7,6 +7,8 @@
     <link rel="icon" href="favicon.ico">
     <title>Substrate钱包</title>
     <style>
+      .address-info {}
+      .address-info .item { margin: 6px;}
       .wallet-info {}
       .wallet-info .item { margin: 6px;}
     </style>
@@ -17,47 +19,72 @@
     </noscript>
     <div id="app">
       <div class="func">
-        <button type="button" id="btnGenerateWallet">生成钱包</button>
+        <button type="button" id="btnGenerateAddress">生成地址</button>
         <button type="button" id="btnConnectWallet">连接钱包</button>
       </div>
     </div>
-    <div class="wallet-info">
-      <div class="item">
-        <span>助记词: </span><span id="mnemonic"></span>
+    <fieldset>
+      <legend>地址信息</legend>
+      <div class="address-info">
+        <div class="item">
+          <span>助记词: </span><span id="mnemonic"></span>
+        </div>
+        <!-- <div class="item">
+          <span>私钥: </span><span id="seed"></span>
+        </div> -->
+        <div class="item">
+          <span>SS58 Address: </span><span id="ss58Address"></span>
+        </div>
+        <div class="item">
+          <span>Kusama Address: </span><span id="acaAddress"></span>
+        </div>
+        <div class="item">
+          <span>Bifrost Address: </span><span id="bncAddress"></span>
+        </div>
+        <div class="item">
+          <span>Polkadot Address: </span><span id="dotAddress"></span>
+        </div>
+        <div class="item">
+          <span>Edgeware Address: </span><span id="edgAddress"></span>
+        </div>
+        <div class="item">
+          <span>Darwinia Address: </span><span id="cringAddress"></span>
+        </div>
+        <div class="item">
+          <span>Kusama Address: </span><span id="ksmAddress"></span>
+        </div>
+        <div class="item">
+          <span>Kulupu Address: </span><span id="klpAddress"></span>
+        </div>
+        <div class="item">
+          <span>Stafi Address: </span><span id="fisAddress"></span>
+        </div>
+        <div class="item">
+          <span>Plasm Address: </span><span id="plmAddress"></span>
+        </div>
       </div>
-      <!-- <div class="item">
-        <span>私钥: </span><span id="seed"></span>
-      </div> -->
-      <div class="item">
-        <span>SS58 Address: </span><span id="ss58Address"></span>
+    </fieldset>
+    <fieldset>
+      <legend>钱包信息</legend>
+      <div class="wallet-info">
+        <span>当前地址数量: <span id="addrCount">-</span></span>
+        <ul id="addrList">
+        </ul>
       </div>
-      <div class="item">
-        <span>Kusama Address: </span><span id="acaAddress"></span>
+    </fieldset>
+    <fieldset>
+      <legend>
+        Polkadot链上信息
+        <button id="btnRefreshChainInfo" type="button">刷新</button>
+      </legend>
+      <div class="chain-info">
+        <div class="item">
+          <span>最新区块哈唏: </span><span id="latestHash"></span>
+        </div>
+        <div class="item">
+          <span>最新区块高度: </span><span id="latestHeight"></span>
+        </div>
       </div>
-      <div class="item">
-        <span>Bifrost Address: </span><span id="bncAddress"></span>
-      </div>
-      <div class="item">
-        <span>Polkadot Address: </span><span id="dotAddress"></span>
-      </div>
-      <div class="item">
-        <span>Edgeware Address: </span><span id="edgAddress"></span>
-      </div>
-      <div class="item">
-        <span>Darwinia Address: </span><span id="cringAddress"></span>
-      </div>
-      <div class="item">
-        <span>Kusama Address: </span><span id="ksmAddress"></span>
-      </div>
-      <div class="item">
-        <span>Kulupu Address: </span><span id="klpAddress"></span>
-      </div>
-      <div class="item">
-        <span>Stafi Address: </span><span id="fisAddress"></span>
-      </div>
-      <div class="item">
-        <span>Plasm Address: </span><span id="plmAddress"></span>
-      </div>
-    </div>
+    </fieldset>
   </body>
 </html>
